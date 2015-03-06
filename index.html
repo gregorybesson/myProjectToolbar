@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="MyprojectToolbar : A Project Toolbar for your customers !">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>MyprojectToolbar</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/gregorybesson/myProjectToolbar">View on GitHub</a>
+
+          <h1 id="project_title">MyprojectToolbar</h1>
+          <h2 id="project_tagline">A Project Toolbar for your customers !</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/gregorybesson/myProjectToolbar/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/gregorybesson/myProjectToolbar/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="myprojecttoolbar" class="anchor" href="#myprojecttoolbar" aria-hidden="true"><span class="octicon octicon-link"></span></a>myProjectToolbar</h1>
+
+<p>A Project Toolbar for your customers : They can comment and screenshot a page they test and a Jira ticket will be automagically created !</p>
+
+<p>Tested succesfully on IE10+, FF, Chrome and Safari</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>This project adds a toolbar at the bottom of a website. When the user click on "open a bug", an input box is open. The user can then enter the detail of his bug.
+Then, a screenshot is taken and a php script is called via ajax which creates a ticket in your Jira project. In this ticket, the following informations are entered :</p>
+
+<ul>
+<li>The summary is what the user has entered</li>
+<li>A screenshot is attached to the ticket</li>
+<li>The detail is filled in with
+
+<ul>
+<li>the URL of the page </li>
+<li>the user-agent detail (including the browser and its version used to test)</li>
+</ul>
+</li>
+</ul>
+
+<p>If you want to use the toolbar on your sites you just have to add a js on your project :</p>
+
+<pre><code> &lt;script src="http://myToolbar.domain/toolbar/toolbar.js"&gt;
+   var toolbarCode = "SANDBOX";
+ &lt;/script&gt;
+</code></pre>
+
+<p>The var toolbarCode is the JIRA project code for which you want to create a ticket.</p>
+
+<p>Limitations : This project uses html2canvas.js library (<a href="http://html2canvas.hertzen.com/">http://html2canvas.hertzen.com/</a>) which uses a canvas to create an image from the html page. As this is not 100% accurate, your screenshot is only a representation of what the user sees.</p>
+
+<p>Another version could be based on a phantomJS screenshot but the result will not respect what the user sees neither...</p>
+
+<h2>
+<a id="todo-list" class="anchor" href="#todo-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>TODO List</h2>
+
+<ul>
+<li>Create a bookmarklet from this project so that you don't have to change the code of your project.</li>
+<li>Create a Chrome plugin so that the users can screenshot high fidelity screens and comment them.</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MyprojectToolbar maintained by <a href="https://github.com/gregorybesson">gregorybesson</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
