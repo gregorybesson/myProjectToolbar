@@ -25,7 +25,7 @@ Limitations : This project uses html2canvas.js library (http://html2canvas.hertz
 Another version could be based on a phantomJS screenshot but the result will not respect what the user sees neither...
 
 
-TODO : 
+## TODO List 
 - Create a bookmarklet from this project so that you don't have to change the code of your project.
 - Create a Chrome plugin so that the users can screenshot high fidelity screens and comment them.
 
