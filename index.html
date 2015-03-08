@@ -82,6 +82,8 @@ Then, a screenshot is taken and a php script is called via ajax which creates a 
 <h2>
 <a id="bookmarklet" class="anchor" href="#bookmarklet" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bookmarklet</h2>
 
+<h2>Drag &amp; Drop this link to your toolbar : <a href="javascript:(function(){var%20jsCode=document.createElement('script');jsCode.setAttribute('src','http://management.adfab.fr/toolbar/toolbarlet.js');document.body.appendChild(jsCode);}());">AdFab-OpenABug</a></h2>
+
 <p>Thanks to the bookmarklet, you can create a Jira ticket directly with a screenshot + url + user-agent + description of the bug by the user (see above for more details).</p>
 
 <p>This bookmarklet calls a remote js which calls a "Jira proxy" so that you don't have to expose or ask for the user permissions. See below the code you have to put on a page so that you can propose your users to create a bookmark easily in one click (remember to change your domain) :</p>
