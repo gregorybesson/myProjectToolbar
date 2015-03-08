@@ -53,7 +53,7 @@ Then, a screenshot is taken and a php script is called via ajax which creates a 
 
 <ul>
 <li>The summary is what the user has entered</li>
-<li>A screenshot is attached to the ticket</li>
+<li>A screenshot is attached to the ticket. BEWARE - Sometimes, This is not possible to take a screenshot (see below). </li>
 <li>The detail is filled in with
 
 <ul>
@@ -65,14 +65,13 @@ Then, a screenshot is taken and a php script is called via ajax which creates a 
 
 <p>If you want to use the toolbar on your sites you just have to add a js on your project :</p>
 
-<pre><code> &lt;script src="http://myToolbar.domain/toolbar/toolbar.js"&gt;
-   var toolbarCode = "SANDBOX";
- &lt;/script&gt;
+<pre><code> &lt;script&gt;var toolbarCode = "SANDBOX";&lt;/script&gt;
+ &lt;script src="http://myToolbar.domain/toolbar/toolbar.js"&gt;&lt;/script&gt;
 </code></pre>
 
 <p>The var toolbarCode is the JIRA project code for which you want to create a ticket.</p>
 
-<p>Limitations : This project uses html2canvas.js library (<a href="http://html2canvas.hertzen.com/">http://html2canvas.hertzen.com/</a>) which uses a canvas to create an image from the html page. As this is not 100% accurate, your screenshot is only a representation of what the user sees.</p>
+<p>Limitations : This project uses html2canvas.js library (<a href="http://html2canvas.hertzen.com/">http://html2canvas.hertzen.com/</a>) which uses a canvas to create an image from the html page. As this is not 100% accurate, your screenshot is only a representation of what the user sees. Furthermore, sometimes, html2canvas is not able to take a screenshot. In this case, we open a ticket without the screenshot.</p>
 
 <p>Another version could be based on a phantomJS screenshot but the result will not respect what the user sees neither...</p>
 
