@@ -34,14 +34,14 @@
         <h1>
 <a id="myprojecttoolbar" class="anchor" href="#myprojecttoolbar" aria-hidden="true"><span class="octicon octicon-link"></span></a>myProjectToolbar</h1>
 
-<ul>
-<li>A Project Toolbar for your customers : They can comment and screenshot a page they test and a Jira ticket will be automagically created !
+<p>myProjectToolbar is a tool available in 2 versions :</p>
 
 <ul>
+<li>A toolbar at the bottom of you web pages.</li>
 <li>A bookmarklet if you don't want or can't modify your code !</li>
 </ul>
-</li>
-</ul>
+
+<p>In both versions, your users will be able to comment and screenshot a page they test and a Jira ticket will be automagically created !</p>
 
 <p>Tested succesfully on IE10+, FF, Chrome and Safari</p>
 
@@ -71,6 +71,10 @@ Then, a screenshot is taken and a php script is called via ajax which creates a 
 
 <p>The var toolbarCode is the JIRA project code for which you want to create a ticket.</p>
 
+<p>the toolbar will appear at the bottom of the web page :</p>
+
+<p><img src="https://raw.githubusercontent.com/gregorybesson/myProjectToolbar/master/example/toolbar.png" alt="alt text"></p>
+
 <p>Limitations : This project uses html2canvas.js library (<a href="http://html2canvas.hertzen.com/">http://html2canvas.hertzen.com/</a>) which uses a canvas to create an image from the html page. As this is not 100% accurate, your screenshot is only a representation of what the user sees. Furthermore, sometimes, html2canvas is not able to take a screenshot. In this case, we open a ticket without the screenshot.</p>
 
 <p>Another version could be based on a phantomJS screenshot but the result will not respect what the user sees neither...</p>
@@ -78,7 +82,6 @@ Then, a screenshot is taken and a php script is called via ajax which creates a 
 <h2>
 <a id="bookmarklet" class="anchor" href="#bookmarklet" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bookmarklet</h2>
 
-<h2>Drag &amp; Drop this link to your toolbar : <a href="javascript:(function(){var%20jsCode=document.createElement('script');jsCode.setAttribute('src','http://management.adfab.fr/toolbar/toolbarlet.js');document.body.appendChild(jsCode);}());">AdFab-OpenABug</a></h2>
 <p>Thanks to the bookmarklet, you can create a Jira ticket directly with a screenshot + url + user-agent + description of the bug by the user (see above for more details).</p>
 
 <p>This bookmarklet calls a remote js which calls a "Jira proxy" so that you don't have to expose or ask for the user permissions. See below the code you have to put on a page so that you can propose your users to create a bookmark easily in one click (remember to change your domain) :</p>
@@ -91,11 +94,11 @@ Then, a screenshot is taken and a php script is called via ajax which creates a 
 
 <p>This example below is the code you can add to your page to propose your users to add the bookmarklet as a favorite :</p>
 
-<a href="javascript:(function(){var%20jsCode=document.createElement('script');jsCode.setAttribute('src','http://management.adfab.fr/toolbar/toolbarlet.js');document.body.appendChild(jsCode);}());">Drag &amp; Drop me to your toolbar</a>
+<pre><code> &lt;a href="javascript:(function(){var%20jsCode=document.createElement('script');jsCode.setAttribute('src','http://yourhost.domain/toolbar/toolbarlet.js');document.body.appendChild(jsCode);}());"&gt;Drag &amp; Drop me to your toolbar&lt;/a&gt;
 </code></pre>
 
 <h2>
-<a id="example-of-a-jira-ticket-creation-from-the-bookmarklet" class="anchor" href="#example-of-a-jira-ticket-creation-from-the-bookmarklet" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example of a Jira ticket creation from the bookmarklet</h2>
+<a id="example---jira-ticket-creation-with-the-bookmarklet" class="anchor" href="#example---jira-ticket-creation-with-the-bookmarklet" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example - Jira ticket creation with the bookmarklet</h2>
 
 <h3>
 <a id="the-website" class="anchor" href="#the-website" aria-hidden="true"><span class="octicon octicon-link"></span></a>The website</h3>
