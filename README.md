@@ -31,6 +31,10 @@ This bookmarklet calls a remote js which calls a "Jira proxy" so that you don't 
 
      javascript: (function () { var jsCode = document.createElement('script'); jsCode.setAttribute('src', 'http://yourhost.domain/toolbar/toolbarlet.js'); document.body.appendChild(jsCode);   }());
 
+### Make your users add your bookmarklet to their favorites
+This example below is the code you can add to your page to propose your users to add the bookmarklet as a favorite :
+
+     <a href="javascript:(function(){var%20jsCode=document.createElement('script');jsCode.setAttribute('src','http://yourhost.domain/toolbar/toolbarlet.js');document.body.appendChild(jsCode);}());">Drag & Drop me to your toolbar</a>
 
 ## TODO List 
 - Create a Chrome plugin so that the users can screenshot high fidelity screens and comment them.
