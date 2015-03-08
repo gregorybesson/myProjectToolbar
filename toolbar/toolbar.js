@@ -82,7 +82,32 @@ function takeScreenShot(){
 		ajax.send(canvasData );
 
 		document.getElementById("adfab-toolbar").style.display = "block";
-	});
+	}, function(error) {
+        // Impossible to make a screenshot. I create the jira issue anyway
+        var canvasData = "noimage";
+            canvasData += "&code=" + toolbarCode + "&summary=" +encodeURIComponent(unescape(issue))+"&url="+encodeURIComponent(document.URL);
+
+        if (ie > 0 && ie < 10) {
+            var ajax = new XDomainRequest();
+            ajax.open("POST",postUrl);
+        } else {
+            var ajax = new XMLHttpRequest();
+            ajax.open("POST",postUrl,true);
+        }
+        
+        ajax.onload = function() {
+         console.log(ajax.responseText);
+         document.getElementById("adf-toolbar-issue").innerHTML = ajax.responseText;
+        };
+
+        ajax.onerror = function() {
+          console.log('There was an error!');
+        };
+
+        ajax.send(canvasData);
+
+        document.getElementById("adfab-toolbar").style.display = "block";
+    });
 }
 
 writeHTMLasJS();
