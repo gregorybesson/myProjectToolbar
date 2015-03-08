@@ -1,6 +1,9 @@
 # myProjectToolbar
- - A Project Toolbar for your customers : They can comment and screenshot a page they test and a Jira ticket will be automagically created !
+myProjectToolbar is a tool available in 2 versions :
+- A toolbar at the bottom of you web pages.
 - A bookmarklet if you don't want or can't modify your code !
+
+In both versions, your users will be able to comment and screenshot a page they test and a Jira ticket will be automagically created !
 
 Tested succesfully on IE10+, FF, Chrome and Safari
 
@@ -20,6 +23,10 @@ If you want to use the toolbar on your sites you just have to add a js on your p
 	
 The var toolbarCode is the JIRA project code for which you want to create a ticket.
 
+the toolbar will appear at the bottom of the web page :
+
+![alt text](https://raw.githubusercontent.com/gregorybesson/myProjectToolbar/master/example/toolbar.png)
+
 Limitations : This project uses html2canvas.js library (http://html2canvas.hertzen.com/) which uses a canvas to create an image from the html page. As this is not 100% accurate, your screenshot is only a representation of what the user sees. Furthermore, sometimes, html2canvas is not able to take a screenshot. In this case, we open a ticket without the screenshot.
 
 Another version could be based on a phantomJS screenshot but the result will not respect what the user sees neither...
@@ -36,7 +43,7 @@ This example below is the code you can add to your page to propose your users to
 
      <a href="javascript:(function(){var%20jsCode=document.createElement('script');jsCode.setAttribute('src','http://yourhost.domain/toolbar/toolbarlet.js');document.body.appendChild(jsCode);}());">Drag & Drop me to your toolbar</a>
 
-## Example of a Jira ticket creation from the bookmarklet
+## Example - Jira ticket creation with the bookmarklet
 
 ### The website
 ![alt text](https://raw.githubusercontent.com/gregorybesson/myProjectToolbar/master/example/example1.png)
