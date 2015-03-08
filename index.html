@@ -34,12 +34,19 @@
         <h1>
 <a id="myprojecttoolbar" class="anchor" href="#myprojecttoolbar" aria-hidden="true"><span class="octicon octicon-link"></span></a>myProjectToolbar</h1>
 
-<p>A Project Toolbar for your customers : They can comment and screenshot a page they test and a Jira ticket will be automagically created !</p>
+<ul>
+<li>A Project Toolbar for your customers : They can comment and screenshot a page they test and a Jira ticket will be automagically created !
+
+<ul>
+<li>A bookmarklet if you don't want or can't modify your code !</li>
+</ul>
+</li>
+</ul>
 
 <p>Tested succesfully on IE10+, FF, Chrome and Safari</p>
 
 <h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+<a id="toolbar-usage" class="anchor" href="#toolbar-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Toolbar Usage</h2>
 
 <p>This project adds a toolbar at the bottom of a website. When the user click on "open a bug", an input box is open. The user can then enter the detail of his bug.
 Then, a screenshot is taken and a php script is called via ajax which creates a ticket in your Jira project. In this ticket, the following informations are entered :</p>
@@ -70,10 +77,19 @@ Then, a screenshot is taken and a php script is called via ajax which creates a 
 <p>Another version could be based on a phantomJS screenshot but the result will not respect what the user sees neither...</p>
 
 <h2>
+<a id="bookmarklet" class="anchor" href="#bookmarklet" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bookmarklet</h2>
+
+<p>Thanks to the bookmarklet, you can create a Jira ticket directly with a screenshot + url + user-agent + description of the bug by the user (see above for more details).</p>
+
+<p>This bookmarklet calls a remote js which calls a "Jira proxy" so that you don't have to expose or ask for the user permissions. See below the code you have to put on a page so that you can propose your users to create a bookmark easily in one click (remember to change your domain) :</p>
+
+<pre><code> javascript: (function () { var jsCode = document.createElement('script'); jsCode.setAttribute('src', 'http://yourhost.domain/toolbar/toolbarlet.js'); document.body.appendChild(jsCode);   }());
+</code></pre>
+
+<h2>
 <a id="todo-list" class="anchor" href="#todo-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>TODO List</h2>
 
 <ul>
-<li>Create a bookmarklet from this project so that you don't have to change the code of your project.</li>
 <li>Create a Chrome plugin so that the users can screenshot high fidelity screens and comment them.</li>
 </ul>
       </section>
