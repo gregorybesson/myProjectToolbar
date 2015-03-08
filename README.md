@@ -38,14 +38,21 @@ This example below is the code you can add to your page to propose your users to
 
 ## Example of a Jira ticket creation from the bookmarklet
 
-*The process*
-![alt text](https://github.com/gregorybesson/myProjectToolbar/tree/master/example/example1.png "The website")
-![alt text](https://github.com/gregorybesson/myProjectToolbar/tree/master/example/example2.png "Enter the Jira Project Code")
-![alt text](https://github.com/gregorybesson/myProjectToolbar/tree/master/example/example3.png "Enter the description")
+### The website
+![alt text](https://raw.githubusercontent.com/gregorybesson/myProjectToolbar/master/example/example1.png)
 
-*The result*
-![alt text](https://github.com/gregorybesson/myProjectToolbar/tree/master/example/example4.png "The result in Jira")
-![alt text](https://github.com/gregorybesson/myProjectToolbar/tree/master/example/example5.png "With the screenshot")
+### Enter the Jira project code
+![alt text](https://raw.githubusercontent.com/gregorybesson/myProjectToolbar/master/example/example2.png)
+
+### Enter the description
+![alt text](https://raw.githubusercontent.com/gregorybesson/myProjectToolbar/master/example/example3.png)
+
+
+### The result in Jira
+![alt text](https://raw.githubusercontent.com/gregorybesson/myProjectToolbar/master/example/example4.png)
+
+### With the screenshot
+![alt text](https://raw.githubusercontent.com/gregorybesson/myProjectToolbar/master/example/example5.png)
 
 
 ## TODO List 
