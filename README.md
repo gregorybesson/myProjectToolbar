@@ -1,9 +1,10 @@
 # myProjectToolbar
-A Project Toolbar for your customers : They can comment and screenshot a page they test and a Jira ticket will be automagically created !
+ - A Project Toolbar for your customers : They can comment and screenshot a page they test and a Jira ticket will be automagically created !
+- A bookmarklet if you don't want or can't modify your code !
 
 Tested succesfully on IE10+, FF, Chrome and Safari
 
-## Usage
+## Toolbar Usage
 This project adds a toolbar at the bottom of a website. When the user click on "open a bug", an input box is open. The user can then enter the detail of his bug.
 Then, a screenshot is taken and a php script is called via ajax which creates a ticket in your Jira project. In this ticket, the following informations are entered :
 - The summary is what the user has entered
@@ -24,9 +25,13 @@ Limitations : This project uses html2canvas.js library (http://html2canvas.hertz
 
 Another version could be based on a phantomJS screenshot but the result will not respect what the user sees neither...
 
+## Bookmarklet
+Thanks to the bookmarklet, you can create a Jira ticket directly with a screenshot + url + user-agent + description of the bug by the user (see above for more details).
+
+This bookmarklet calls a remote js which calls a "Jira proxy" so that you don't have to expose or ask for the user permissions. See below the code you have to put on a page so that you can propose your users to create a bookmark easily in one click (remember to change your domain) :
+
+     javascript: (function () { var jsCode = document.createElement('script'); jsCode.setAttribute('src', 'http://yourhost.domain/toolbar/toolbarlet.js'); document.body.appendChild(jsCode);   }());
+
 
 ## TODO List 
-- Create a bookmarklet from this project so that you don't have to change the code of your project.
 - Create a Chrome plugin so that the users can screenshot high fidelity screens and comment them.
-
-
