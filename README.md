@@ -36,5 +36,17 @@ This example below is the code you can add to your page to propose your users to
 
      <a href="javascript:(function(){var%20jsCode=document.createElement('script');jsCode.setAttribute('src','http://yourhost.domain/toolbar/toolbarlet.js');document.body.appendChild(jsCode);}());">Drag & Drop me to your toolbar</a>
 
+## Example of a Jira ticket creation from the bookmarklet
+
+*The process*
+![alt text](https://github.com/gregorybesson/myProjectToolbar/tree/master/example/example1.png "The website")
+![alt text](https://github.com/gregorybesson/myProjectToolbar/tree/master/example/example2.png "Enter the Jira Project Code")
+![alt text](https://github.com/gregorybesson/myProjectToolbar/tree/master/example/example3.png "Enter the description")
+
+*The result*
+![alt text](https://github.com/gregorybesson/myProjectToolbar/tree/master/example/example4.png "The result in Jira")
+![alt text](https://github.com/gregorybesson/myProjectToolbar/tree/master/example/example5.png "With the screenshot")
+
+
 ## TODO List 
 - Create a Chrome plugin so that the users can screenshot high fidelity screens and comment them.
